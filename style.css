@@ -1,0 +1,189 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 500px;
+}
+
+.aquarium {
+    width: 600px;
+    height: 400px;
+    margin: 60px 50px 40px;
+    border-left: 10px solid #008a91;
+    border-right: 10px solid #008a91;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    background: url(./images/cảnh\ 1.jpg);
+    background-size: cover;
+    z-index:inherit;
+}
+
+.border {
+    position: relative;
+    left: -15px;
+    width: 610px;
+    height: 40px;
+    background-color: black;
+    z-index: 20;
+    overflow: hidden;
+}
+
+.border-top {
+    top: 0;
+}
+
+.border-top::before {
+    content: '';
+    position: absolute;
+    background-color: #d6cccc47;
+    top: 0;
+    left: -80px;
+    height: 40px;
+    width: 80px;
+    transform: rotate(-60deg);
+    filter: brightness(.7);
+    animation: mirror 8s linear infinite;
+}
+
+@keyframes mirror {
+    0% {
+        left: -80px;
+    }
+    100% {
+        left: 690px;
+    }
+}
+
+.border-bottom {
+    top: calc(100% - 20px);
+}
+
+.border-bottom::before {
+    content: '';
+    position: absolute;
+    background-color: #d6cccc47;
+    top: 0;
+    left: -80px;
+    height: 40px;
+    width: 80px;
+    transform: rotate(-60deg);
+    filter: brightness(.7);
+    animation: mirror 8s linear infinite;
+    animation-delay: 2s;
+}
+.fish {
+    position: absolute;
+    z-index: 10;
+}
+
+.fish-1 {
+    background: url(./images/catra.png);
+    background-size: contain;
+    width: 80px;
+    height: 80px;
+    top: 70%;
+    left: 0;
+    transform: rotateY(180deg);
+    background-repeat: no-repeat;
+    animation: fish 10s linear infinite;
+}
+
+.fish-2 {
+    background: url(./images/laokieng.png);
+    background-size: contain;
+    width: 90px;
+    height: 90px;
+    top: 50%;
+    right:  0;
+    transform: rotateY(180deg);
+    background-repeat: no-repeat;
+    animation: fish 15s linear infinite;
+}
+.fish-3 {
+    background-image: url(./images/tien.png);
+    background-size: contain;
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 0;
+    transform: rotateY(180deg);
+    animation: fish 8s linear infinite;
+}
+@keyframes fish {
+    0% {
+        left: 0%;
+        top: 70%;
+        transform: rotateY(180deg); 
+    }
+    50% {
+        left: calc(100% - 80px); 
+        top: 40%;
+        transform: rotateY(180deg); 
+    }
+    50.01% {
+        transform: rotateY(0deg); 
+        top: 40%;
+    }
+    100% {
+        left: 0%; 
+        top: 70%;
+        transform: rotateY(0deg);
+    }
+}
+@keyframes fish1 {
+    0% {
+        left: 0%;
+        top: 50%;
+        transform: rotateY(180deg); 
+    }
+    50% {
+        left: calc(100% - 100px); 
+        top: 60%;
+        transform: rotateY(180deg); 
+    }
+    50.01% {
+        transform: rotateY(0deg); 
+        top: 40%;
+    }
+    100% {
+        left: 0%; 
+        top: 70%;
+        transform: rotateY(0deg);
+    }
+}
+@keyframes fish2 {
+    0% {
+        left: 0%;
+        top: 60%;
+        transform: rotateY(180deg); 
+    }
+    50% {
+        left: calc(100% - 100px); 
+        top: 50%;
+        transform: rotateY(180deg); 
+    }
+    50.01% {
+        transform: rotateY(0deg); 
+        top: 40%;
+    }
+    100% {
+        left: 0%; 
+        top: 70%;
+        transform: rotateY(0deg);
+    }
+}
